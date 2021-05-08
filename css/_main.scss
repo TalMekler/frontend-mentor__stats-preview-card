@@ -1,0 +1,167 @@
+.block {
+    display: block;
+}
+.clr--pri-3 {
+    color: $pri-3;
+}
+// -----------------------------------------
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(27, 31, 63);
+    color: white;
+    padding: rem(10);
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: white;
+        font-weight: 700;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: $pri-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(170) rem(160);
+
+    @include screenMax(rem(1300)) {
+        padding: rem(170) rem(80);
+    }
+    @include screenMax(rem(1150)) {
+        // Card Vertical
+        padding: rem(85) rem(25);
+    }
+    @include screenMax(rem(1130)) {
+        padding: rem(140) rem(50);
+    }
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    // align-self: center;
+    background-color: $pri-2;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: rem(10);
+    justify-content: space-between;
+    overflow: hidden;
+
+    @include screenMax(rem(1150)) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .content {
+        padding: rem(75);
+        display: flex;
+        flex-direction: column;
+
+        @include screenMax(rem(1150)) {
+            padding: rem(50) rem(34);
+        }
+
+        @include screenMax(rem(500)) {
+            padding: rem(40) rem(34);
+            * {
+                text-align: center;
+            }
+        }
+
+        h1 {
+            color: $neu-1;
+            margin-bottom: rem(30);
+
+            @include screenMax(rem(500)) {
+                font-size: rem(22);
+                margin-bottom: rem(23);
+
+                * {
+                    display: inline;
+                }
+            }
+        }
+
+        &__body {
+            color: $neu-2;
+            max-width: rem(347);
+            line-height: 2;
+            margin-bottom: auto;
+            @include screenMax(rem(1150)) {
+                margin-bottom: rem(50);
+            }
+            @include screenMax(rem(500)) {
+                max-width: unset;
+                font-size: rem(12);
+            }
+        }
+
+        .stats-wrapper {
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            @include screenMax(rem(500)) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: rem(25);
+            }
+
+            .stat {
+                display: flex;
+                flex-direction: column;
+
+                &__heading {
+                    color: $neu-1;
+                    font-size: 2em;
+                    font-weight: 700;
+                    line-height: 1.5;
+
+                    @include screenMax(rem(500)) {
+                        font-size: rem(18);
+                    }
+                }
+
+                &__text {
+                    color: $neu-3;
+                    text-transform: uppercase;
+                    letter-spacing: rem(1);
+                    @include screenMax(rem(500)) {
+                        font-size: rem(10);
+                    }
+                }
+            }
+        }
+    }
+
+    .img-container {
+        background: url(../images/image-header-desktop.jpg) $pri-3;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: transparent;
+
+        @include screenMax(rem(1150)) {
+            grid-row: 1/2;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+// Colors
+$pri-1: hsl(233, 47%, 7%); // (main background)
+$pri-2: hsl(244, 38%, 16%); //(card background)
+$pri-3: hsl(277, 64%, 61%); //(accent)
+
+$neu-1: hsl(0, 0%, 100%); //(main heading, stats)
+$neu-2: hsla(0, 0%, 100%, 0.75); //(main paragraph)
+$neu-3: hsla(0, 0%, 100%, 0.6); //(stat headings)
+
+// Font weight
+$fw-1: 400;
+$fw-2: 700;
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+body {
+    font-size: rem(15);
+    font-family: 'Inter', sans-serif;
+    font-weight: $fw-1;
+}
+

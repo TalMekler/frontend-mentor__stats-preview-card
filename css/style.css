@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  font-size: 0.9375rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.block {
+  display: block;
+}
+
+.clr--pri-3 {
+  color: #aa5cdb;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1b1f3f;
+  color: white;
+  padding: 0.625rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: white;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  opacity: 0.75;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10.625rem 10rem;
+}
+
+@media screen and (max-width: 81.25rem) {
+  body {
+    padding: 10.625rem 5rem;
+  }
+}
+
+@media screen and (max-width: 71.875rem) {
+  body {
+    padding: 5.3125rem 1.5625rem;
+  }
+}
+
+@media screen and (max-width: 70.625rem) {
+  body {
+    padding: 8.75rem 3.125rem;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #1b1938;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  border-radius: 0.625rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .card {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.card .content {
+  padding: 4.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .card .content {
+    padding: 3.125rem 2.125rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content {
+    padding: 2.5rem 2.125rem;
+  }
+  .card .content * {
+    text-align: center;
+  }
+}
+
+.card .content h1 {
+  color: white;
+  margin-bottom: 1.875rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content h1 {
+    font-size: 1.375rem;
+    margin-bottom: 1.4375rem;
+  }
+  .card .content h1 * {
+    display: inline;
+  }
+}
+
+.card .content__body {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 21.6875rem;
+  line-height: 2;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .card .content__body {
+    margin-bottom: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content__body {
+    max-width: unset;
+    font-size: 0.75rem;
+  }
+}
+
+.card .content .stats-wrapper {
+  margin-bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content .stats-wrapper {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 1.5625rem;
+  }
+}
+
+.card .content .stats-wrapper .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .content .stats-wrapper .stat__heading {
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content .stats-wrapper .stat__heading {
+    font-size: 1.125rem;
+  }
+}
+
+.card .content .stats-wrapper .stat__text {
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+@media screen and (max-width: 31.25rem) {
+  .card .content .stats-wrapper .stat__text {
+    font-size: 0.625rem;
+  }
+}
+
+.card .img-container {
+  background: url(../images/image-header-desktop.jpg) #aa5cdb;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: transparent;
+}
+
+@media screen and (max-width: 71.875rem) {
+  .card .img-container {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
